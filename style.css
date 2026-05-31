@@ -5,16 +5,23 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   background: #7fbdb3;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
+/* Animated pastel mesh/liquid background */
 .animated-bg {
   position: fixed;
   inset: 0;
@@ -24,6 +31,7 @@ body {
   background: #7fbdb3;
 }
 
+/* First animated gradient layer */
 .animated-bg::before {
   content: "";
   position: absolute;
@@ -40,6 +48,7 @@ body {
   animation: meshMove1 8s ease-in-out infinite alternate;
 }
 
+/* Second animated gradient layer */
 .animated-bg::after {
   content: "";
   position: absolute;
@@ -56,6 +65,7 @@ body {
   animation: meshMove2 11s ease-in-out infinite alternate;
 }
 
+/* Slightly visible background movement */
 @keyframes meshMove1 {
   0% {
     transform: translate(-10%, -7%) scale(1.1);
@@ -103,6 +113,7 @@ body {
   max-width: 600px;
   padding: 30px;
   text-align: center;
+  margin: 20px 0;
 }
 
 h1 {
@@ -244,9 +255,25 @@ textarea:focus {
   font-size: 0.9rem;
 }
 
+/* Mobile fix */
 @media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
   .container {
+    margin: 15px 0 30px;
     padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
   }
 
   .case-selector {
@@ -256,5 +283,9 @@ textarea:focus {
   .case-btn {
     padding: 10px 15px;
     font-size: 0.9rem;
+  }
+
+  textarea {
+    height: 140px;
   }
 }
