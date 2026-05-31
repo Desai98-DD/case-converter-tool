@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Converter Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <div class="animated-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <h1>Case Converter Tool</h1>
+    <p class="subtitle">
+      Select case type, paste text, and get converted text automatically
+    </p>
+
+    <div class="case-selector">
+      <button id="upper-btn" class="case-btn active" type="button">
+        UPPER CASE
+      </button>
+
+      <button id="lower-btn" class="case-btn" type="button">
+        lower case
+      </button>
+    </div>
+
+    <div class="input-group">
+      <label for="text-input">Paste your text here:</label>
+      <textarea id="text-input" placeholder="Paste your text here..."></textarea>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <button id="manual-copy-btn" class="manual-copy-btn" type="button">
+      Mac users 😅
+    </button>
+
+    <div class="instructions">
+      <h3>How to use:</h3>
+      <ul>
+        <li>Select <strong>UPPER CASE</strong> or <strong>lower case</strong></li>
+        <li>Paste your text into the box above</li>
+        <li>Text is automatically converted and copied to clipboard</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>Works instantly - no buttons needed!</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
